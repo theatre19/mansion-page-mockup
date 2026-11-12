@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>マンション紹介ページ リニューアル案｜東京テアトル</title>
+<style>
+:root{--navy:#182d45;--blue:#315c7d;--gold:#b48b4b;--ink:#25313c;--muted:#697783;--line:#dce3e8;--paper:#fff;--bg:#f3f5f6;--pale:#edf3f6;--green:#28785b;--red:#a44b45}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",Meiryo,sans-serif;line-height:1.75}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.topbar{background:var(--navy);color:white;padding:12px 22px;font-size:13px;display:flex;justify-content:space-between;gap:12px;align-items:center}.brand{font-weight:700;letter-spacing:.08em}.topbar a{color:white}.wrap{max-width:1120px;margin:auto;padding:0 22px}.intro{padding:34px 0 18px}.eyebrow{color:var(--gold);font-size:12px;letter-spacing:.16em;font-weight:700}.intro h1{font-size:clamp(25px,4vw,38px);line-height:1.35;margin:8px 0}.intro p{color:var(--muted);margin:8px 0 0}.switcher{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 28px}.switcher button{border:1px solid #bdc9d1;background:white;color:var(--navy);padding:12px 18px;border-radius:6px;font-weight:700;cursor:pointer}.switcher button.active{background:var(--navy);color:white;border-color:var(--navy)}.page{display:none}.page.active{display:block}.hero{background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px #18334a12;margin-bottom:26px}.heroimg{width:100%;height:390px;object-fit:cover;display:block;background:#d9e0e4}.hero-body{padding:28px 32px 30px}.status{display:inline-flex;padding:5px 12px;border-radius:3px;font-size:12px;font-weight:700;letter-spacing:.06em;margin-bottom:12px}.status.live{background:#e8f3ed;color:var(--green)}.status.done{background:#eef0f2;color:#56616a}.hero h2{font-size:clamp(26px,4vw,36px);margin:0 0 12px;line-height:1.35;color:var(--navy)}.hero-sub{color:var(--muted);font-size:14px}.price{font-size:34px;color:var(--red);font-weight:800;margin:10px 0}.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:22px}.fact{background:#fff;padding:13px 15px}.fact small{display:block;color:var(--muted);font-size:11px}.fact strong{font-size:15px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{display:inline-block;padding:11px 18px;background:var(--navy);color:#fff;border-radius:4px;font-size:13px;font-weight:700}.btn.secondary{background:white;border:1px solid var(--navy);color:var(--navy)}.section{background:white;border-radius:9px;padding:28px 30px;margin:22px 0;box-shadow:0 3px 14px #18334a0b}.section h3{font-size:23px;color:var(--navy);margin:0 0 18px;padding-bottom:12px;border-bottom:2px solid var(--gold);line-height:1.4}.section h4{font-size:17px;color:var(--blue);margin:24px 0 10px}.lead{font-size:16px}.muted{color:var(--muted);font-size:12px}.callout{background:var(--pale);border-left:4px solid var(--gold);padding:16px 18px;margin:16px 0}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tile{border:1px solid var(--line);border-radius:7px;padding:16px;background:#fff}.tile strong{display:block;color:var(--navy);margin-bottom:4px}.tile p{margin:0;color:var(--muted);font-size:13px}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px;min-width:560px}th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}th{background:#f1f4f6;color:var(--navy);font-weight:700;white-space:nowrap}.compact td,.compact th{padding:8px 10px}.facility{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.facility-group{border:1px solid var(--line);border-radius:7px;padding:15px}.facility-group h4{margin:0 0 8px;font-size:15px}.facility-group ul{margin:0;padding-left:19px;font-size:13px}.tag{display:inline-block;background:#f0f3f5;border-radius:3px;padding:2px 7px;font-size:11px;color:#596875;margin:2px}.toc{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.toc a{font-size:12px;background:#f0f3f5;padding:6px 10px;border-radius:3px}.chartbar{display:flex;align-items:end;gap:7px;height:150px;border-bottom:1px solid #9eabb4;padding:8px 5px 0;margin:18px 0 6px}.bar{flex:1;background:#9cb2c2;min-width:9px;border-radius:3px 3px 0 0;position:relative}.bar span{position:absolute;bottom:-24px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap}.recommend{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.recommend .tile{min-height:110px}.recommend .num{font-size:22px;color:var(--gold);font-weight:800}.faq details{border-bottom:1px solid var(--line);padding:13px 0}.faq summary{font-weight:700;color:var(--navy);cursor:pointer}.faq p{margin:10px 0 0;font-size:14px}.areas details{border:1px solid var(--line);border-radius:6px;padding:12px 15px;margin:8px 0}.areas summary{font-weight:700;color:var(--navy);cursor:pointer}.areas p{font-size:13px;margin:10px 0 0}.foot{background:var(--navy);color:#fff;padding:30px 22px;margin-top:40px}.foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#fff}.source{font-size:11px;color:var(--muted);margin-top:12px}.photo-credit{font-size:10px;color:#65727c;text-align:right;padding:5px 12px}.pillrow{display:flex;gap:7px;flex-wrap:wrap}.notice{font-size:12px;color:#687681;background:#f7f8f9;padding:12px;border-radius:5px}.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}.kpi{font-size:25px;color:var(--navy);font-weight:800}.subhead{font-size:12px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:760px){.wrap{padding:0 13px}.heroimg{height:240px}.hero-body,.section{padding:20px 17px}.facts{grid-template-columns:repeat(2,1fr)}.grid2,.grid3,.facility,.recommend,.two-col{grid-template-columns:1fr}.section h3{font-size:20px}.topbar{padding:10px 13px}.fact strong{font-size:14px}}
+@media print{body{background:white}.topbar,.switcher,.toc{display:none!important}.page{display:block!important;break-before:page}.page:first-of-type{break-before:auto}.section,.hero{box-shadow:none;break-inside:avoid}.areas details{break-inside:avoid}.heroimg{height:260px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="brand">TOKYO THEATRE｜マンション売却相談センター</div><div>無料相談　東京本社 0120-900-881　｜　関西支社 0120-711-018</div></div>
+<div class="wrap">
+<header class="intro">
+<div class="eyebrow">PROPERTY PAGE REDESIGN / FULL CONTENT MOCKUP</div>
+<h1>マンション紹介ページ リニューアル案</h1>
+<p>既存ページの掲載情報を残し、物件情報 → 周辺環境 → 買取・売却実績 → 相場・査定情報の順に再構成した画面イメージです。</p>
+<div class="switcher">
+<button class="active" onclick="showPage('kita',this)">販売中｜北浦和公園パークホームズ</button>
+<button onclick="showPage('yutenji',this)">販売済み｜秀和祐天寺レジデンス</button>
+</div>
+</header>
+
+<main id="kita" class="page active">
+<div class="hero">
+<img class="heroimg" src="https://mansion.theatres.co.jp/wp-content/uploads/2026/11/%E5%8C%97%E6%B5%A6%E5%92%8C%E5%85%AC%E5%9C%92%E3%83%91%E3%83%BC%E3%82%AF%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%BA%E5%A4%96%E8%A6%B3-scaled.jpeg" alt="北浦和公園パークホームズ 外観">
+<div class="photo-credit">写真：東京テアトル掲載ページより</div>
+<div class="hero-body">
+<span class="status live">販売中</span>
+<h2>北浦和公園パークホームズ</h2>
+<div class="hero-sub">埼玉県さいたま市中央区大戸4-23-1</div>
+<div class="price">3,980万円</div>
+<div class="subhead">当社買取物件｜現在販売中</div>
+<div class="facts">
+<div class="fact"><small>専有面積・間取り</small><strong>59.07㎡／2SLDK+WIC</strong></div>
+<div class="fact"><small>交通</small><strong>JR京浜東北線「北浦和」駅 徒歩7分</strong></div>
+<div class="fact"><small>築年月</small><strong>1996年3月</strong></div>
+<div class="fact"><small>所在地</small><strong>さいたま市中央区大戸4-23-1</strong></div>
+</div>
+<div class="actions"><a class="btn" href="https://mansion.theatres.co.jp/fudosan/95162/" target="_blank">物件資料・購入相談</a><a class="btn secondary" href="https://mansion.theatres.co.jp/contact/" target="_blank">無料相談・無料査定</a></div>
+</div></div>
+
+<nav class="toc"><a href="#k-summary">物件概要</a><a href="#k-feature">物件のご案内</a><a href="#k-area">周辺施設</a><a href="#k-market">売却相場</a><a href="#k-price">価格推移</a><a href="#k-appraise">買取査定</a><a href="#k-recommend">こんな方におすすめ</a><a href="#k-coverage">対応エリア</a></nav>
+
+<section class="section" id="k-summary"><h3>01｜物件概要</h3>
+<div class="two-col"><div><p class="lead">北浦和駅徒歩7分。専有面積59.07㎡、2SLDK+WICの住戸です。</p><p>当社が買い取り、現在販売しているマンションです。物件の詳細資料や購入に関するご相談は、上記ボタンよりお問い合わせください。</p></div><div class="tile"><div class="subhead">PROPERTY DATA</div><div class="kpi">59.07㎡</div><strong>2SLDK+WIC</strong><p>販売価格 3,980万円</p><p>1996年3月築</p></div></div>
+<div class="tablewrap"><table><tbody>
+<tr><th>マンション名</th><td>北浦和公園パークホームズ</td><th>販売状況</th><td>販売中</td></tr>
+<tr><th>所在地</th><td>埼玉県さいたま市中央区大戸4-23-1</td><th>販売価格</th><td>3,980万円</td></tr>
+<tr><th>専有面積</th><td>59.07㎡</td><th>間取り</th><td>2SLDK+WIC</td></tr>
+<tr><th>交通</th><td>JR京浜東北線 北浦和駅 徒歩7分</td><th>築年月</th><td>1996年3月</td></tr>
+</tbody></table></div>
+<p class="muted">※販売価格・販売状況は掲載時点の情報です。最新状況はお問い合わせください。</p></section>
+
+<section class="section" id="k-feature"><h3>02｜当社買取物件のご案内</h3><div class="callout"><strong>現在販売中の物件です。</strong><br>東京テアトルが買い取ったマンションを販売しています。物件資料のご請求、内見・購入に関するご相談を承ります。</div><div class="actions"><a class="btn" href="https://mansion.theatres.co.jp/fudosan/95162/" target="_blank">物件資料・購入について問い合わせる</a></div></section>
+
+<section class="section" id="k-area"><h3>03｜周辺施設・住環境</h3>
+<p>北浦和駅周辺の買い物施設、公園、文化施設、医療・教育施設などが利用できるエリアです。</p>
+<div class="facility">
+<div class="facility-group"><h4>買い物・日用品</h4><ul><li>まいばすけっと北浦和駅南店（徒歩5分／400m）</li><li>ファミリーマートさいたま大戸四丁目店（徒歩3分／240m）</li><li>セブンイレブン北浦和公園前店（徒歩7分／550m）</li><li>トモズ北浦和店（徒歩8分／640m）</li></ul></div>
+<div class="facility-group"><h4>公園・文化・スポーツ</h4><ul><li>北浦和公園（徒歩3分／200m）</li><li>常盤緑道（徒歩2分／150m）</li><li>埼玉県立近代美術館（徒歩4分／241m）</li><li>浦和北公園テニスコート（徒歩4分／248m）</li><li>コナミスポーツクラブ北浦和（徒歩9分／686m）</li></ul></div>
+<div class="facility-group"><h4>教育・保育</h4><ul><li>さいたま市立常盤小学校（徒歩2分／160m）</li><li>さいたま市立与野南小学校（徒歩12分／898m）</li><li>常盤こころ保育園（徒歩3分／178m）</li><li>うらわポポロ保育園（徒歩3分／215m）</li><li>北浦和ひなた保育園（徒歩3分／221m）</li></ul></div>
+<div class="facility-group"><h4>医療・公共施設</h4><ul><li>埼玉メディカルセンター（徒歩7分／486m）</li><li>北浦和駅前郵便局（徒歩5分／350m）</li><li>浦和常盤郵便局（徒歩7分／487m）</li><li>さいたま市立北浦和図書館（徒歩9分／698m）</li></ul></div>
+<div class="facility-group"><h4>飲食店</h4><ul><li>モスバーガー北浦和西口店（徒歩4分／295m）</li><li>吉野家北浦和西口店（徒歩4分／309m）</li><li>サイゼリヤ北浦和西口店（徒歩5分／323m）</li><li>松屋北浦和店（徒歩5分／354m）</li></ul></div>
+<div class="facility-group"><h4>その他</h4><ul><li>ワークマンプラスさいたま大戸店（徒歩6分／462m）</li><li>浦和北公園（徒歩3分／177m）</li></ul></div>
+</div>
+<p class="notice">周辺施設は外部不動産情報の掲載内容を参考にした追加案です。距離・徒歩分数は情報源によって直線距離と道路距離の扱いが異なるため、公開前に現地ルート・施設の現況・学区を確認してください。学校は通学区域を保証するものではありません。</p>
+</section>
+
+<section class="section" id="k-market"><h3>04｜さいたま市中央区周辺エリアのマンション売却相場</h3><p>最新の成約価格・専有面積・築年数を月次で掲載しています。</p>
+<div class="tablewrap"><table class="compact"><thead><tr><th>時期</th><th>成約価格</th><th>専有面積</th><th>築年数</th></tr></thead><tbody>
+<tr><td>2025年6月</td><td>4,322万円</td><td>68.86㎡</td><td>22.57年</td></tr><tr><td>2025年7月</td><td>3,835万円</td><td>65.48㎡</td><td>25.29年</td></tr><tr><td>2025年8月</td><td>3,690万円</td><td>66.55㎡</td><td>25.81年</td></tr><tr><td>2025年9月</td><td>4,551万円</td><td>67.21㎡</td><td>22.40年</td></tr><tr><td>2025年10月</td><td>3,776万円</td><td>66.42㎡</td><td>25.28年</td></tr><tr><td>2025年11月</td><td>4,209万円</td><td>69.41㎡</td><td>23.85年</td></tr><tr><td>2025年12月</td><td>3,973万円</td><td>68.34㎡</td><td>28.59年</td></tr><tr><td>2026年1月</td><td>4,484万円</td><td>68.54㎡</td><td>22.77年</td></tr><tr><td>2026年2月</td><td>4,694万円</td><td>67.53㎡</td><td>22.21年</td></tr><tr><td>2026年3月</td><td>4,686万円</td><td>70.07㎡</td><td>23.33年</td></tr><tr><td>2026年4月</td><td>4,110万円</td><td>67.17㎡</td><td>24.63年</td></tr><tr><td>2026年5月</td><td>4,363万円</td><td>69.18㎡</td><td>24.81年</td></tr><tr><th>直近12ヶ月</th><th>4,236万円</th><th>67.94㎡</th><th>24.24年</th></tr>
+</tbody></table></div><p class="source">出所：レインズ成約登録を弊社集計（月次はさいたま市全域）</p></section>
+
+<section class="section" id="k-price"><h3>05｜さいたま市中央区のマンション価格の推移</h3>
+<div class="tablewrap"><table class="compact"><thead><tr><th>年度</th><th>成約価格</th><th>専有面積</th><th>築年数</th></tr></thead><tbody>
+<tr><td>2014年度</td><td>2,782万円</td><td>72.49㎡</td><td>16.41年</td></tr><tr><td>2015年度</td><td>2,558万円</td><td>72.81㎡</td><td>20.52年</td></tr><tr><td>2016年度</td><td>2,905万円</td><td>71.30㎡</td><td>18.31年</td></tr><tr><td>2017年度</td><td>3,094万円</td><td>72.06㎡</td><td>17.92年</td></tr><tr><td>2018年度</td><td>3,402万円</td><td>71.69㎡</td><td>16.71年</td></tr><tr><td>2019年度</td><td>3,387万円</td><td>71.87㎡</td><td>19.02年</td></tr><tr><td>2020年度</td><td>3,386万円</td><td>69.66㎡</td><td>21.67年</td></tr><tr><td>2021年度</td><td>3,661万円</td><td>71.93㎡</td><td>21.08年</td></tr><tr><td>2022年度</td><td>4,131万円</td><td>71.85㎡</td><td>22.47年</td></tr><tr><td>2023年度</td><td>4,026万円</td><td>71.04㎡</td><td>25.49年</td></tr><tr><td>2024年度</td><td>4,243万円</td><td>70.11㎡</td><td>23.97年</td></tr>
+</tbody></table></div><p class="source">出所：REINS TOWERおよびレインズ成約登録を弊社集計</p>
+<div class="callout">さいたま市中央区周辺エリアのマンション買取相場は、上記売却相場の86％になります。</div></section>
+
+<section class="section" id="k-appraise"><h3>06｜マンション買取価格の考え方・査定で確認する項目</h3><p>実際のマンション買取価格は、専有面積や築年数以外に、住戸条件のプラス・マイナスで査定価格が上下します。</p><div class="grid3">
+<div class="tile"><strong>立地・周辺環境</strong><p>立地、周辺環境、路線・駅、駅距離</p></div><div class="tile"><strong>住戸の条件</strong><p>階数・眺望、バルコニー方位</p></div><div class="tile"><strong>室内・建物の状態</strong><p>内装・設備、雨漏り・水漏れ、アスベストの有無、住戸内孤独死・自殺の有無</p></div>
+</div><p>さいたま市中央区周辺エリアのマンション買取相場は、上記売却相場の86％になります。</p><p>マンション買取相場の詳細は、関連記事「マンション買取相場をプロが解説！買取価格はマンション売却相場の何割か？」をご覧ください。</p><a href="https://mansion.theatres.co.jp/" target="_blank">関連記事・マンション売却相談センター</a></section>
+
+<section class="section" id="k-recommend"><h3>07｜こんな方におすすめです</h3><div class="recommend">
+<div class="tile"><div class="num">01</div><strong>査定金額を知りたい</strong><p>まずは売却可能額・査定金額が知りたい。</p></div>
+<div class="tile"><div class="num">02</div><strong>早く現金化したい</strong><p>いますぐ・決まった日時までにお金が必要。</p></div>
+<div class="tile"><div class="num">03</div><strong>売却方法を相談したい</strong><p>自分に合った売却方法が分からない。</p></div>
+<div class="tile"><div class="num">04</div><strong>家財を片付けられない</strong><p>家具や家財が片付けられず困っている。</p></div>
+<div class="tile"><div class="num">05</div><strong>親族の物件を売りたい</strong><p>高齢の親・親戚の物件なのでトラブルなく売りたい。</p></div>
+<div class="tile"><div class="num">06</div><strong>古い・故障がある</strong><p>すごく古く、故障などもあるがこのまま売りたい。</p></div>
+</div><div class="actions"><a class="btn" href="https://mansion.theatres.co.jp/" target="_blank">無料査定・売却相談</a></div></section>
+
+<section class="section areas" id="k-coverage"><h3>08｜対応エリア</h3><p>東京23区・東京市部・神奈川県・千葉県・埼玉県・大阪府・兵庫県・京都府・滋賀県・奈良県・和歌山県・愛知県に対応しています。</p>
+<details><summary>東京23区・東京市部</summary><p><b>東京23区：</b>世田谷区、中央区、中野区、北区、千代田区、台東区、品川区、墨田区、大田区、文京区、新宿区、杉並区、板橋区、江戸川区、江東区、渋谷区、港区、目黒区、練馬区、荒川区、葛飾区、豊島区、足立区。<br><b>東京市部：</b>三鷹市、八王子市、国分寺市、国立市、多摩市、小平市、小金井市、府中市、日野市、昭島市、東久留米市、東大和市、東村山市、武蔵村山市、武蔵野市、清瀬市、狛江市、町田市、福生市、稲城市、立川市、羽村市、西東京市、調布市、青梅市。</p></details>
+<details><summary>神奈川県</summary><p>三浦市、中郡大磯町、伊勢原市、厚木市、大和市、小田原市、川崎市中原区、川崎市多摩区、川崎市宮前区、川崎市川崎区、川崎市幸区、川崎市高津区、川崎市麻生区、平塚市、座間市、横浜市中区、横浜市保土ケ谷区、横浜市南区、横浜市戸塚区、横浜市旭区、横浜市栄区、横浜市泉区、横浜市港北区、横浜市港南区、横浜市瀬谷区、横浜市磯子区、横浜市神奈川区、横浜市緑区、横浜市西区、横浜市都筑区、横浜市金沢区、横浜市青葉区、横浜市鶴見区、横須賀市、海老名市、相模原市中央区、相模原市南区、相模原市緑区、秦野市、綾瀬市、茅ヶ崎市、藤沢市、逗子市、鎌倉市。</p></details>
+<details><summary>千葉県</summary><p>佐倉市、八千代市、勝浦市、千葉市中央区、千葉市稲毛区、千葉市緑区、千葉市美浜区、千葉市花見川区、千葉市若葉区、印西市、四街道市、富里市、市原市、市川市、成田市、我孫子市、松戸市、柏市、流山市、浦安市、白井市、習志野市、船橋市、野田市、鎌ヶ谷市。</p></details>
+<details><summary>埼玉県</summary><p>さいたま市中央区、さいたま市北区、さいたま市南区、さいたま市大宮区、さいたま市岩槻区、さいたま市桜区、さいたま市浦和区、さいたま市緑区、さいたま市西区、さいたま市見沼区、ふじみ野市、三郷市、上尾市、久喜市、入間市、入間郡三芳町、八潮市、北葛飾郡杉戸町、北足立郡伊奈町、吉川市、和光市、坂戸市、富士見市、川口市、川越市、志木市、戸田市、所沢市、新座市、春日部市、朝霞市、桶川市、熊谷市、狭山市、羽生市、草加市、蓮田市、蕨市、越谷市、飯能市、鴻巣市、鶴ヶ島市。</p></details>
+<details><summary>大阪府</summary><p>大阪市都島区、大阪市福島区、大阪市此花区、大阪市西区、大阪市港区、大阪市大正区、大阪市天王寺区、大阪市浪速区、大阪市西淀川区、大阪市東淀川区、大阪市東成区、大阪市生野区、大阪市旭区、大阪市城東区、大阪市阿倍野区、大阪市住吉区、大阪市東住吉区、大阪市西成区、大阪市淀川区、大阪市鶴見区、大阪市住之江区、大阪市平野区、大阪市北区、大阪市中央区、堺市堺区、堺市中区、堺市東区、堺市西区、堺市南区、堺市北区、堺市美原区、岸和田市、豊中市、池田市、吹田市、泉大津市、高槻市、貝塚市、守口市、枚方市、茨木市、八尾市、泉佐野市、富田林市、寝屋川市、河内長野市、松原市、大東市、和泉市、箕面市、柏原市、羽曳野市、門真市、摂津市、高石市、藤井寺市、東大阪市、泉南市、四條畷市、交野市、大阪狭山市、阪南市、三島郡、豊能郡、泉北郡、泉南郡、南河内郡。</p></details>
+<details><summary>兵庫県・京都府・滋賀県・奈良県・和歌山県・愛知県</summary><p><b>兵庫県：</b>神戸市東灘区、神戸市灘区、神戸市兵庫区、神戸市長田区、神戸市須磨区、神戸市垂水区、神戸市北区、神戸市中央区、神戸市西区、姫路市、尼崎市、明石市、西宮市、洲本市、芦屋市、伊丹市、相生市、豊岡市、加古川市、赤穂市、西脇市、宝塚市、三木市、高砂市、川西市、小野市、三田市、加西市、丹波篠山市、養父市、丹波市、南あわじ市、朝来市、淡路市、宍粟市、加東市、たつの市、川辺郡、多可郡、加古郡、神崎郡、揖保郡、赤穂郡、佐用郡、美方郡。<br><b>京都府：</b>京都市北区、京都市上京区、京都市左京区、京都市中京区、京都市東山区、京都市下京区、京都市南区、京都市右京区、京都市伏見区、京都市山科区、京都市西京区、福知山市、舞鶴市、綾部市、宇治市、宮津市、亀岡市、城陽市、向日市、長岡京市、八幡市、京田辺市、京丹後市、南丹市、木津川市、乙訓郡、久世郡、綴喜郡、相楽郡、船井郡、与謝郡。<br><b>滋賀県：</b>大津市、彦根市、長浜市、近江八幡市、草津市、守山市、栗東市、甲賀市、野洲市、湖南市、高島市、東近江市、米原市、蒲生郡、愛知郡、犬上郡。<br><b>奈良県：</b>奈良市、大和高田市、大和郡山市、天理市、橿原市、桜井市、五條市、御所市、生駒市、香芝市、葛城市、宇陀市、山辺郡山添村、生駒郡斑鳩町、生駒郡三郷町、生駒郡安堵町、生駒郡平群町、磯城郡川西町、磯城郡三宅町、磯城郡田原本町、宇陀郡曽爾村、宇陀郡御杖村、高市郡明日香村、高市郡高取町、北葛城郡王寺町、北葛城郡広陵町、北葛城郡上牧町、北葛城郡河合町。<br><b>和歌山県：</b>和歌山市、海南市、橋本市、有田市、紀の川市、岩出市、海草郡、伊都郡、有田郡。<br><b>愛知県：</b>名古屋市千種区、名古屋市港区、名古屋市瑞穂区、名古屋市緑区、小牧市。</p></details>
+</section>
+<section class="section"><h3>09｜お問い合わせ</h3><div class="callout"><strong>北浦和公園パークホームズの購入・物件資料について</strong><br>東京本社 0120-900-881／関西支社 0120-711-018<br>受付 10:00〜18:00／水曜日定休</div><div class="actions"><a class="btn" href="https://mansion.theatres.co.jp/fudosan/95162/" target="_blank">物件資料・購入相談</a><a class="btn secondary" href="https://mansion.theatres.co.jp/" target="_blank">無料査定・売却相談</a></div></section>
+</main>
+
+<main id="yutenji" class="page">
+<div class="hero">
+<img class="heroimg" src="https://www.daikyo-anabuki.co.jp/building/mansion_img/8569/8569_01.JPG" alt="秀和祐天寺レジデンス 外観">
+<div class="photo-credit">外観写真：大京穴吹不動産掲載写真（2012年5月撮影）</div>
+<div class="hero-body">
+<span class="status done">販売済み｜買取・再販実績</span>
+<h2>秀和祐天寺レジデンス</h2>
+<div class="hero-sub">東京都世田谷区下馬5-34-26</div>
+<div class="price" style="color:var(--navy)">当社買取・再販実績 1戸</div>
+<div class="subhead">2026年3月｜2階住戸を再販売</div>
+<div class="facts">
+<div class="fact"><small>専有面積・間取り</small><strong>52.50㎡／2LDK</strong></div>
+<div class="fact"><small>交通</small><strong>東急東横線「祐天寺」駅 徒歩9分</strong></div>
+<div class="fact"><small>築年月</small><strong>1969年10月</strong></div>
+<div class="fact"><small>マンション規模</small><strong>RC造・地上8階建／48戸</strong></div>
+</div>
+<div class="actions"><a class="btn" href="https://mansion.theatres.co.jp/fudosan/92653/" target="_blank">売却査定・買取相談</a><a class="btn secondary" href="https://mansion.theatres.co.jp/" target="_blank">無料相談</a></div>
+</div></div>
+
+<nav class="toc"><a href="#y-summary">物件概要</a><a href="#y-record">買取・再販実績</a><a href="#y-status">現在の売却状況</a><a href="#y-estimate">売却価格の目安</a><a href="#y-listing">周辺売出事例</a><a href="#y-transactions">取引・成約事例</a><a href="#y-area">周辺環境</a><a href="#y-market">エリア相場</a><a href="#y-faq">よくある質問</a></nav>
+
+<section class="section" id="y-summary"><h3>01｜秀和祐天寺レジデンスの概要</h3>
+<p class="lead">東京テアトルは、秀和祐天寺レジデンスで買取・再販の実績があります。</p>
+<p>周辺の取引事例など、売却を検討する際に参考となる価格情報をご紹介します。所有されているお部屋については、仲介で売却する場合の想定価格と、東京テアトルが直接買い取る価格の両方を無料で査定できます。</p>
+<div class="tablewrap"><table><tbody>
+<tr><th>マンション名</th><td>秀和祐天寺レジデンス</td><th>所在地</th><td>東京都世田谷区下馬5-34-26</td></tr>
+<tr><th>交通</th><td>東急東横線 祐天寺駅 徒歩9分</td><th>築年月</th><td>1969年10月</td></tr>
+<tr><th>構造・規模</th><td>鉄筋コンクリート造 地上8階建</td><th>総戸数</th><td>48戸</td></tr>
+<tr><th>当社買取・再販実績</th><td>1戸</td><th>実績住戸</th><td>52.50㎡／2LDK</td></tr>
+</tbody></table></div></section>
+
+<section class="section" id="y-record"><h3>02｜東京テアトルの買取・再販実績</h3><p>東京テアトルが秀和祐天寺レジデンスで買い取り、再販売した住戸です。</p><div class="grid2"><div class="tile"><div class="subhead">RE-SALE RECORD</div><div class="kpi">1戸</div><strong>当社の買取・再販実績</strong><p>2026年3月／2階</p></div><div class="tile"><div class="subhead">PROPERTY</div><div class="kpi">52.50㎡</div><strong>2LDK</strong><p>東急東横線「祐天寺」駅 徒歩9分</p></div></div><div class="tablewrap"><table><thead><tr><th>再販の時期</th><th>所在階</th><th>戸数</th></tr></thead><tbody><tr><td>2026年3月</td><td>2階</td><td>1戸</td></tr></tbody></table></div></section>
+
+<section class="section" id="y-status"><h3>03｜秀和祐天寺レジデンスの現在の売却状況</h3><div class="callout"><strong>現在、当社が確認できている売り出し中の住戸はありません。</strong><br>東京テアトルの独自調査／2026年7月13日時点</div><p>所有されているお部屋の想定売却価格を知りたい方は、無料査定をご利用ください。</p></section>
+
+<section class="section" id="y-estimate"><h3>04｜秀和祐天寺レジデンスはいくらで売れる？</h3><p>売却価格は、専有面積・所在階・向き・室内状態・リフォームの有無・売却時点の市況などによって変わります。</p>
+<div class="tablewrap"><table><thead><tr><th>価格の種類</th><th>このページで確認できる目安</th><th>意味</th></tr></thead><tbody>
+<tr><td>周辺の売出価格</td><td>4,499万〜11,280万円</td><td>同じ祐天寺駅周辺で現在売り出されているマンションの価格（東京テアトル独自調査）</td></tr>
+<tr><td>周辺の取引・成約価格</td><td>2,600万〜7,500万円</td><td>下馬周辺で実際に取引・成約した事例（国土交通省の公開データ）。秀和祐天寺レジデンスそのものとは限りません</td></tr>
+<tr><td>仲介での売却査定価格</td><td>個別査定</td><td>一般の購入者へ仲介で販売した場合に、売却が見込める価格</td></tr>
+<tr><td>東京テアトルの買取査定価格</td><td>個別査定</td><td>東京テアトルが直接購入する場合の価格</td></tr>
+</tbody></table></div>
+<p>周辺の売出価格や取引価格が、そのまま所有されているお部屋の売却価格になるわけではありません。東京テアトルでは、専有面積・階数・向き・室内状態などを確認し、「仲介で売却する場合の想定価格」と「東京テアトルが直接買い取る価格」の両方を無料で査定しています。</p>
+<h4>査定で確認する情報</h4><div class="tablewrap"><table><thead><tr><th>主な参考情報</th><th>内容</th></tr></thead><tbody><tr><td>東京テアトルの買取・再販実績</td><td>秀和祐天寺レジデンスの買取・再販実績</td></tr><tr><td>秀和祐天寺レジデンスの売出状況</td><td>現在の売出価格・住戸条件</td></tr><tr><td>周辺マンションの売出・成約事例</td><td>公開データやレインズ等の市場情報</td></tr><tr><td>その他の資料</td><td>東京テアトルの独自調査・外部調査機関の資料など</td></tr></tbody></table></div>
+<p>東京テアトルでは、上記の市場データに加えて、所有されているお部屋の専有面積・所在階・向き・室内状態・リフォーム状況などを確認して査定します。</p>
+<h4>売却方法の違い</h4><div class="tablewrap"><table><thead><tr><th>売却方法</th><th>特徴</th></tr></thead><tbody><tr><td>仲介</td><td>一般の購入希望者を探し、高値での売却を目指す方法</td></tr><tr><td>直接買取</td><td>不動産会社が直接購入し、短期間で確実に売却する方法</td></tr><tr><td>買取保証付売却</td><td>一定期間は仲介で販売し、売れなかった場合はあらかじめ決めた価格で買い取る方法</td></tr></tbody></table></div>
+<p>東京テアトルでは、仲介で売却する場合の想定価格と、東京テアトルが直接買い取る価格の両方をご案内できます。査定は無料で、査定後に売却・買取を強制することはありません。</p><a class="btn" href="https://mansion.theatres.co.jp/fudosan/92653/" target="_blank">秀和祐天寺レジデンスの売却価格・買取価格を無料査定する</a>
+<p class="source">世田谷区全体のマンション買取相場・売却相場の目安や、おすすめの買取業者の選び方については、関連記事「世田谷区のマンション買取業者おすすめ7選！マンション売却相場と買取相場」「世田谷区のマンション相場と価格推移｜築年数別の売却価格も解説」「東京のマンション買取業者｜独自分析ランキングとおすすめ業者」も案内。</p></section>
+
+<section class="section" id="y-listing"><h3>05｜祐天寺駅周辺の他の売却中マンション</h3><p>秀和祐天寺レジデンスの価格を検討する際の参考として、同じ祐天寺駅周辺で現在売り出されているマンションをご紹介します。</p><div class="tablewrap"><table class="compact"><thead><tr><th>マンション名</th><th>売却価格</th><th>専有面積</th><th>㎡単価</th><th>間取り</th><th>所在階</th><th>建築年</th><th>取引態様</th><th>最寄り駅</th><th>駅徒歩</th></tr></thead><tbody>
+<tr><td>ランドステージ祐天寺</td><td>9,780万円</td><td>52.73㎡</td><td>185.5万円/㎡</td><td>2LDK</td><td>－</td><td>－</td><td>売主</td><td>東横線 祐天寺駅</td><td>8分</td></tr>
+<tr><td>クオリア目黒祐天寺</td><td>9,480万円</td><td>48.78㎡</td><td>194.3万円/㎡</td><td>2LDK</td><td>2階</td><td>－</td><td>売主</td><td>東横線 祐天寺駅</td><td>7分</td></tr>
+<tr><td>ドミニ目黒</td><td>4,499万円</td><td>42.89㎡</td><td>104.9万円/㎡</td><td>2DK</td><td>6階</td><td>－</td><td>売主</td><td>東横線 祐天寺駅</td><td>19分</td></tr>
+<tr><td>藤和シティホームズ世田谷下馬</td><td>11,280万円</td><td>63.99㎡</td><td>176.3万円/㎡</td><td>3LDK</td><td>7階</td><td>－</td><td>売主</td><td>東横線 祐天寺駅</td><td>12分</td></tr>
+</tbody></table></div><p class="source">最終更新：2026年7月13日（現在、当社で確認できている情報です）</p></section>
+
+<section class="section" id="y-transactions"><h3>06｜国土交通省が公開している取引事例と成約価格</h3><p>国土交通省「不動産情報ライブラリ」では、実際に成立した不動産の取引価格・成約価格が、マンション名や部屋番号を伏せた形で公開されています。以下は、秀和祐天寺レジデンスと同じ下馬周辺で、条件が近い公開事例です。</p>
+<div class="tablewrap"><table class="compact"><thead><tr><th>種別</th><th>取引時期</th><th>取引価格</th><th>専有面積</th><th>㎡単価（参考）</th><th>間取り</th><th>建築年</th><th>改装</th></tr></thead><tbody>
+<tr><td>取引価格情報</td><td>2025年第4四半期</td><td>7,500万円</td><td>65㎡</td><td>115.4万円/㎡</td><td>2LDK</td><td>1972年</td><td>改装済み</td></tr>
+<tr><td>成約価格情報</td><td>2025年第4四半期</td><td>6,000万円</td><td>55㎡</td><td>109.1万円/㎡</td><td>1LDK</td><td>1972年</td><td>－</td></tr>
+<tr><td>成約価格情報</td><td>2025年第4四半期</td><td>7,500万円</td><td>70㎡</td><td>107.1万円/㎡</td><td>2LDK</td><td>1972年</td><td>－</td></tr>
+<tr><td>成約価格情報</td><td>2025年第4四半期</td><td>2,600万円</td><td>40㎡</td><td>65.0万円/㎡</td><td>2DK</td><td>1967年</td><td>－</td></tr>
+<tr><td>成約価格情報</td><td>2025年第4四半期</td><td>3,800万円</td><td>45㎡</td><td>84.4万円/㎡</td><td>1LDK</td><td>1970年</td><td>－</td></tr>
+<tr><td>成約価格情報</td><td>2025年第3四半期</td><td>2,600万円</td><td>40㎡</td><td>65.0万円/㎡</td><td>1LDK</td><td>1968年</td><td>－</td></tr>
+</tbody></table></div>
+<h4>価格の種別について</h4><ul><li>取引価格情報：不動産の取引当事者を対象としたアンケート調査に基づく、実際の取引価格の情報です。</li><li>成約価格情報：指定流通機構（レインズ）に登録された、宅地建物取引業者が関与した不動産取引の成約価格の情報です。</li></ul><p>いずれも実際に成立した取引（成約）の価格ですが、情報の出所が異なります。</p><p>※「取引時期」の「第○四半期」は各年の3か月区分です（第1＝1〜3月／第2＝4〜6月／第3＝7〜9月／第4＝10〜12月）。<br>※価格および専有面積は公開データをもとに丸められているため、㎡単価は参考値です。</p><p class="source">出典：国土交通省 不動産情報ライブラリ（API）。同APIを使用していますが、提供情報の最新性、正確性、完全性等が保証されたものではありません。</p></section>
+
+<section class="section" id="y-area"><h3>07｜周辺環境・周辺施設</h3>
+<h4>基本情報・街の特徴</h4><p>秀和祐天寺レジデンスは、東京都世田谷区下馬5丁目に位置するマンションです。1969年10月築で、構造は鉄筋コンクリート造8階建てです。東急東横線「祐天寺」駅から徒歩9分の距離にあります。周辺は閑静な住宅街が広がり、近隣には蛇崩川緑道が通るなど緑に親しめる環境が整っています。落ち着いた住環境と都心へのアクセスのよさを兼ね備えた立地です。</p>
+<h4>世田谷区の住みやすさ</h4><p>世田谷区は東京23区の南西部に位置し、緑豊かで落ち着いた住宅街が広がる人気のエリアです。東急各線をはじめ複数の路線が利用でき、渋谷や中目黒方面へのアクセスも良好です。区内には公園や緑道、教育施設が充実しており、子育て世帯からも支持されています。スーパーや商店街など買い物環境も各所にそろっています。閑静さと利便性のバランスがとれた、暮らしやすい区といえます。</p>
+<h4>東急東横線「祐天寺」駅の特徴</h4><p>東急東横線「祐天寺」駅は、渋谷方面と横浜方面を結ぶ路線の駅です。渋谷で各方面へ乗り換えできるほか、東京メトロ副都心線との直通運転により池袋方面へもアクセスでき、都心への移動がスムーズです。駅周辺には商店街や飲食店、スーパーが点在し、日常の買い物や食事に便利な環境が整っています。落ち着いた住宅街と下町情緒の残る雰囲気が魅力の街です。</p>
+<div class="facility">
+<div class="facility-group"><h4>学校</h4><ul><li>世田谷区立駒繋小学校</li><li>世田谷区立駒留中学校</li></ul></div>
+<div class="facility-group"><h4>公園</h4><ul><li>蛇崩川緑道</li><li>下馬五丁目庚申公園</li></ul></div>
+<div class="facility-group"><h4>スーパー・コンビニ</h4><ul><li>東急ストア 祐天寺店</li><li>サミットストア 下馬店</li><li>まいばすけっと 祐天寺駅前店</li></ul></div>
+<div class="facility-group"><h4>飲食店</h4><ul><li>マクドナルド 祐天寺店</li></ul></div>
+<div class="facility-group"><h4>その他の施設</h4><ul><li>世田谷下馬郵便局</li><li>世田谷区立下馬図書館</li></ul></div>
+</div><p class="muted">※既存掲載ページに記載されている施設名をそのまま整理しています。徒歩分数は既存ページに記載がないため、ここでは追加していません。</p></section>
+
+<section class="section" id="y-market"><h3>08｜世田谷区周辺エリアのマンション売却相場</h3>
+<h4>最新！世田谷区周辺エリアのマンション売却相場</h4><div class="tablewrap"><table class="compact"><thead><tr><th>時期</th><th>成約価格</th><th>専有面積</th><th>築年数</th></tr></thead><tbody>
+<tr><td>2025年6月</td><td>6,828万円</td><td>58.25㎡</td><td>28.22年</td></tr><tr><td>2025年7月</td><td>7,004万円</td><td>56.94㎡</td><td>27.33年</td></tr><tr><td>2025年8月</td><td>7,452万円</td><td>58.93㎡</td><td>26.39年</td></tr><tr><td>2025年9月</td><td>7,102万円</td><td>57.28㎡</td><td>27.93年</td></tr><tr><td>2025年10月</td><td>6,881万円</td><td>54.67㎡</td><td>27.44年</td></tr><tr><td>2025年11月</td><td>7,396万円</td><td>58.11㎡</td><td>28.85年</td></tr><tr><td>2025年12月</td><td>7,605万円</td><td>57.66㎡</td><td>27.43年</td></tr><tr><td>2026年1月</td><td>7,277万円</td><td>55.80㎡</td><td>28.30年</td></tr><tr><td>2026年2月</td><td>7,478万円</td><td>58.36㎡</td><td>30.62年</td></tr><tr><td>2026年3月</td><td>7,781万円</td><td>58.89㎡</td><td>28.04年</td></tr><tr><td>2026年4月</td><td>7,185万円</td><td>55.32㎡</td><td>28.51年</td></tr><tr><td>2026年5月</td><td>7,454万円</td><td>56.80㎡</td><td>29.50年</td></tr><tr><th>直近12ヶ月</th><th>7,286万円</th><th>57.32㎡</th><th>28.21年</th></tr>
+</tbody></table></div><p class="source">出所：レインズ成約登録を弊社集計（月次は東京都城南地区＝品川区・大田区・目黒区・世田谷区）</p>
+<h4>世田谷区のマンション価格の推移</h4><div class="tablewrap"><table class="compact"><thead><tr><th>年度</th><th>成約価格</th><th>専有面積</th><th>築年数</th></tr></thead><tbody>
+<tr><td>2014年度</td><td>4,242万円</td><td>64.12㎡</td><td>18.45年</td></tr><tr><td>2015年度</td><td>4,409万円</td><td>62.89㎡</td><td>19.86年</td></tr><tr><td>2016年度</td><td>4,507万円</td><td>62.92㎡</td><td>19.96年</td></tr><tr><td>2017年度</td><td>4,718万円</td><td>63.21㎡</td><td>20.49年</td></tr><tr><td>2018年度</td><td>4,846万円</td><td>64.53㎡</td><td>21.31年</td></tr><tr><td>2019年度</td><td>4,965万円</td><td>64.77㎡</td><td>21.27年</td></tr><tr><td>2020年度</td><td>5,236万円</td><td>65.36㎡</td><td>22.19年</td></tr><tr><td>2021年度</td><td>5,785万円</td><td>64.51㎡</td><td>23.51年</td></tr><tr><td>2022年度</td><td>5,993万円</td><td>63.57㎡</td><td>24.94年</td></tr><tr><td>2023年度</td><td>6,422万円</td><td>63.83㎡</td><td>25.71年</td></tr><tr><td>2024年度</td><td>6,524万円</td><td>62.00㎡</td><td>27.93年</td></tr>
+</tbody></table></div><p class="source">出所：REINS TOWERおよびレインズ成約登録を弊社集計</p>
+<div class="callout">世田谷区周辺エリアのマンション買取相場は、上記売却相場の86％になります。</div>
+<p>実際のマンション買取価格は、専有面積や築年数以外に下記のような住戸条件のプラス・マイナスで査定価格が上下します。</p><div class="pillrow"><span class="tag">立地・周辺環境</span><span class="tag">路線・駅</span><span class="tag">駅距離</span><span class="tag">階数・眺望</span><span class="tag">バルコニー方位</span><span class="tag">内装・設備の状況</span><span class="tag">雨漏り・水漏れの有無</span><span class="tag">アスベストの有無</span><span class="tag">住戸内孤独死・自殺の有無</span></div>
+<p>マンション買取相場の詳細は、関連記事「マンション買取相場をプロが解説！買取価格はマンション売却相場の何割か？」をご覧ください。</p>
+</section>
+
+<section class="section" id="y-faq"><h3>09｜よくある質問</h3><div class="faq">
+<details open><summary>秀和祐天寺レジデンスの査定はどこに依頼できますか？</summary><p>東京テアトルにご依頼いただけます。当社は秀和祐天寺レジデンスで買取・再販の実績があり、仲介で売却する場合の想定価格と、東京テアトルが直接買い取る価格の両方を無料で査定します。</p></details>
+<details><summary>秀和祐天寺レジデンスの買取査定・売却査定は無料ですか？</summary><p>はい、無料です。査定後に売却・買取を強制することはありません。価格の確認だけでもご利用いただけます。</p></details>
+<details><summary>査定を依頼すると何が分かりますか？</summary><p>仲介で売却した場合の想定価格、東京テアトルが直接買い取る価格、売却にかかる期間、ご希望に合う売却方法をご案内します。</p></details>
+</div></section>
+
+<section class="section"><h3>10｜こんな方におすすめです</h3><div class="recommend">
+<div class="tile"><div class="num">01</div><strong>査定金額を知りたい</strong><p>まずは売却可能額・査定金額が知りたい。</p></div>
+<div class="tile"><div class="num">02</div><strong>早く現金化したい</strong><p>いますぐ・決まった日時までにお金が必要。</p></div>
+<div class="tile"><div class="num">03</div><strong>売却方法を相談したい</strong><p>自分に合った売却方法が分からない。</p></div>
+<div class="tile"><div class="num">04</div><strong>家財を片付けられない</strong><p>家具や家財が片付けられず困っている。</p></div>
+<div class="tile"><div class="num">05</div><strong>親族の物件を売りたい</strong><p>高齢の親・親戚の物件なのでトラブルなく売りたい。</p></div>
+<div class="tile"><div class="num">06</div><strong>古い・故障がある</strong><p>すごく古く、故障などもあるがこのまま売りたい。</p></div>
+</div></section>
+
+<section class="section areas" id="y-coverage"><h3>11｜対応エリア</h3><p>東京23区・東京市部・神奈川県・千葉県・埼玉県・大阪府・兵庫県・京都府・滋賀県・奈良県・和歌山県・愛知県に対応しています。</p><div id="coverage-copy"></div></section>
+
+<section class="section"><h3>12｜お問い合わせ・無料査定</h3><div class="callout"><strong>秀和祐天寺レジデンスの売却・買取査定をご希望の方へ</strong><br>東京テアトルでは、仲介で売却する場合の想定価格と、当社が直接買い取る価格の両方を無料で査定します。査定後に売却・買取を強制することはありません。</div><div class="actions"><a class="btn" href="https://mansion.theatres.co.jp/fudosan/92653/" target="_blank">秀和祐天寺レジデンスの売却価格・買取価格を無料査定</a></div><p class="muted">東京本社 0120-900-881／関西支社 0120-711-018｜10:00〜18:00／水曜日定休</p></section>
+</main>
+</div>
+<footer class="foot"><div class="wrap"><div><strong>東京テアトル｜マンション売却相談センター</strong><p>無料相談・無料査定　東京本社 0120-900-881<br>関西支社 0120-711-018</p></div><div><a href="https://mansion.theatres.co.jp/" target="_blank">公式サイト</a>　<a href="https://mansion.theatres.co.jp/fudosan/95162/" target="_blank">北浦和公園パークホームズ 現行ページ</a>　<a href="https://mansion.theatres.co.jp/fudosan/92653/" target="_blank">秀和祐天寺レジデンス 現行ページ</a></div></div></footer>
+<script>
+const coverage=document.querySelector('#k-coverage');const coverageCopy=document.querySelector('#coverage-copy');if(coverage&&coverageCopy){coverageCopy.innerHTML=coverage.innerHTML.replace('<h3>08｜対応エリア</h3>','');}
+function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.switcher button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+</script>
+</body>
+</html>
